@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kye Beezy | Official Website</title>
+    <!-- Import Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Import Google Font (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Inter', 'Arial', sans-serif;
+            /* Using a deeper black background */
+            background-color: #0a0a0a;
+            color: #f1f1f1;
+            /* Smooth scrolling */
+            scroll-behavior: smooth;
+        }
+
+        /* Base style for scroll-reveal animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        /* Class to trigger when element is visible */
+        .scroll-reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Gradient text effect for titles */
+        .gradient-text {
+            background-image: linear-gradient(to right, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Marquee animation */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .animate-marquee {
+            animation: marquee 30s linear infinite;
+        }
+
+        /* Glassmorphism effect for navbar */
+        .glass-nav {
+            background-color: rgba(10, 10, 10, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 p-4 transition-all duration-300 glass-nav">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-black gradient-text">KYE BEEZY</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#music" class="text-gray-300 hover:text-white transition-colors">Music</a>
+                <a href="#connect" class="text-gray-300 hover:text-white transition-colors">Connect</a>
+                <a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a>
+                <a href="#footer" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (Simple) -->
+            <div class="md:hidden">
+                <button class="text-white text-2xl">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section (Full Screen) -->
+    <section id="hero" class="min-h-screen flex items-center justify-center text-center overflow-hidden relative px-4">
+        <!-- Background Image (Placeholder) -->
+        <div class="absolute inset-0 w-full h-full bg-cover bg-center z-0" 
+             style="background-image: url('https://placehold.co/1920x1080/1a1a1a/ffffff?text=KYE+BEEZY');">
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-black opacity-70"></div>
+        </div>
+        
+        <!-- Hero Content (Parallax Effect) -->
+        <div id="hero-content" class="z-10 relative">
+            <h1 class="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter">
+                <span class="gradient-text">KYE</span> BEEZY
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mt-4 tracking-wider">
+                VIRGINIA-BASED RAP ARTIST
+            </p>
+            <a href="#music" class="mt-8 inline-block px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                Latest Music
+            </a>
+        </div>
+    </section>
+
+    <!-- 2. Marquee Section (Modern Design) -->
+    <section class="py-4 bg-white text-black text-2xl md:text-3xl font-extrabold overflow-hidden whitespace-nowrap border-y-2 border-indigo-500">
+        <div class="flex animate-marquee">
+            <span class="mx-8">BANDLAB</span>
+            <span class="mx-8 opacity-50">SPOTIFY</span>
+            <span class="mx-8">YOUTUBE</span>
+            <span class="mx-8 opacity-50">INSTAGRAM</span>
+            <span class="mx-8">TWITCH</span>
+            <span class="mx-8 opacity-50">VIRGINIA</span>
+            <!-- Duplicate for seamless loop -->
+            <span class="mx-8">BANDLAB</span>
+            <span class="mx-8 opacity-50">SPOTIFY</span>
+            <span class="mx-8">YOUTUBE</span>
+            <span class="mx-8 opacity-50">INSTAGRAM</span>
+            <span class="mx-8">TWITCH</span>
+            <span class="mx-8 opacity-50">VIRGINIA</span>
+        </div>
+    </section>
+
+    <!-- 3. Music Section -->
+    <section id="music" class="container mx-auto px-4 py-20 md:py-32">
+        <div class="scroll-reveal text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-black uppercase">
+                <span class="gradient-text">Music</span> Releases
+            </h2>
+            <p class="text-lg text-gray-400 mt-4">Listen to the latest tracks from Kye Beezy.</p>
+        </div>
+
+        <!-- Embedded Video (YouTube) -->
+        <div class="scroll-reveal max-w-4xl mx-auto">
+            <div class="aspect-video relative rounded-xl shadow-2xl overflow-hidden border-2 border-gray-800">
+                <!-- Placeholder video - replace with actual music video -->
+                <iframe 
+                    class="absolute inset-0 w-full h-full"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Album/Track List (Simple) -->
+        <div class="scroll-reveal grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+            <!-- Item 1 -->
+            <div class="text-center group">
+                <img src="https://placehold.co/400x400/1a1a1a/f0f0f0?text=Single" alt="Album Cover" class="w-full rounded-lg shadow-lg mb-4 transition-transform transform group-hover:scale-105">
+                <h3 class="text-xl font-bold">Latest Single</h3>
+                <p class="text-gray-400">2025</p>
+            </div>
+            <!-- Item 2 -->
+            <div class="text-center group">
+                <img src="https://placehold.co/400x400/2a2a2a/f0f0f0?text=BandLab" alt="Album Cover" class="w-full rounded-lg shadow-lg mb-4 transition-transform transform group-hover:scale-105">
+                <h3 class="text-xl font-bold">BandLab Tracks</h3>
+                <p class="text-gray-400">Freestyles</p>
+            </div>
+            <!-- Item 3 -->
+            <div class="text-center group">
+                <img src="https://placehold.co/400x400/1a1a1a/f0f0f0?text=Spotify" alt="Album Cover" class="w-full rounded-lg shadow-lg mb-4 transition-transform transform group-hover:scale-105">
+                <h3 class="text-xl font-bold">Spotify Playlist</h3>
+                <p class="text-gray-400">Features</p>
+            </div>
+            <!-- Item 4 -->
+            <div class="text-center group">
+                <img src="https://placehold.co/400x400/2a2a2a/f0f0f0?text=Mixtape" alt="Album Cover" class="w-full rounded-lg shadow-lg mb-4 transition-transform transform group-hover:scale-105">
+                <h3 class="text-xl font-bold">Mixtape Vol. 1</h3>
+                <p class="text-gray-400">2024</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Connect Section (Replaced Tour Section) -->
+    <section id="connect" class="bg-gray-900 py-20 md:py-32">
+        <div class="container mx-auto px-4">
+            <div class="scroll-reveal text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black uppercase">
+                    <span class="gradient-text">Connect</span> Online
+                </h2>
+                <p class="text-lg text-gray-400 mt-4">Find Kye Beezy on his main platforms. No shows... yet.</p>
+            </div>
+
+            <!-- Platform Links -->
+            <div class="scroll-reveal max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- BandLab -->
+                <a href="#" class="flex items-center justify-between p-6 bg-gray-800 rounded-lg shadow-md transition-all hover:bg-gray-700 hover:scale-105 transform">
+                    <h3 class="text-xl font-semibold">BandLab</h3>
+                    <span class="px-4 py-1 bg-red-600 text-white text-sm font-bold rounded-full">Music</span>
+                </a>
+                <!-- YouTube -->
+                <a href="#" class="flex items-center justify-between p-6 bg-gray-800 rounded-lg shadow-md transition-all hover:bg-gray-700 hover:scale-105 transform">
+                    <h3 class="text-xl font-semibold">YouTube</h3>
+                    <span class="px-4 py-1 bg-red-600 text-white text-sm font-bold rounded-full">Videos</span>
+                </a>
+                <!-- Spotify -->
+                <a href="#" class="flex items-center justify-between p-6 bg-gray-800 rounded-lg shadow-md transition-all hover:bg-gray-700 hover:scale-105 transform">
+                    <h3 class="text-xl font-semibold">Spotify</h3>
+                    <span class="px-4 py-1 bg-green-500 text-white text-sm font-bold rounded-full">Stream</span>
+                </a>
+                <!-- Instagram -->
+                <a href="#" class="flex items-center justify-between p-6 bg-gray-800 rounded-lg shadow-md transition-all hover:bg-gray-700 hover:scale-105 transform">
+                    <h3 class="text-xl font-semibold">Instagram</h3>
+                    <span class="px-4 py-1 bg-pink-500 text-white text-sm font-bold rounded-full">Social</span>
+                </a>
+                <!-- Twitch -->
+                <a href="#" class="flex items-center justify-between p-6 bg-gray-800 rounded-lg shadow-md transition-all hover:bg-gray-700 hover:scale-105 transform md:col-span-2">
+                    <h3 class="text-xl font-semibold">Twitch</h3>
+                    <span class="px-4 py-1 bg-purple-600 text-white text-sm font-bold rounded-full">Stream</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. About Section -->
+    <section id="about" class="container mx-auto px-4 py-20 md:py-32">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <!-- Image -->
+            <div class="scroll-reveal">
+                <img src="https://placehold.co/600x800/1a1a1a/ffffff?text=KYE+BEEZY" alt="Kye Beezy Artist Photo" class="rounded-xl shadow-2xl w-full h-auto">
+            </div>
+            <!-- Text -->
+            <div class="scroll-reveal">
+                <h2 class="text-4xl md:text-5xl font-black uppercase mb-6">
+                    About <span class="gradient-text">KYE BEEZY</span>
+                </h2>
+                <p class="text-lg text-gray-300 mb-4 leading-relaxed">
+                    Kye Beezy is an emerging rap artist hailing from Virginia, USA. Known for his raw energy and authentic lyricism, he's building a name for himself in the underground scene.
+                </p>
+                <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                    He actively connects with his fanbase across multiple platforms, dropping new tracks on BandLab and Spotify, music videos on YouTube, and engaging directly with fans on Instagram and Twitch streams.
+                </p>
+                <a href="#" class="inline-block px-6 py-3 border-2 border-indigo-500 text-indigo-400 font-bold rounded-lg hover:bg-indigo-500 hover:text-white transition-colors">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer id="footer" class="bg-gray-900 border-t border-gray-800 py-16">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <h3 class="text-3xl font-bold gradient-text mb-6">FOLLOW KYE BEEZY</h3>
+            <!-- Social Media Icons -->
+            <div class="flex justify-center space-x-6 mb-8">
+                <!-- Instagram -->
+                <a href="#" class="text-gray-400 hover:text-white transition-transform transform hover:scale-110" aria-label="Instagram">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.229-1.664 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c.148-3.229 1.664-4.771 4.919 4.919 1.266.058 1.646.07 4.85.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.305.196-6.484 2.374-6.68 6.68-.058 1.279-.072 1.687-.072 4.947s.014 3.668.072 4.947c.196 4.305 2.374 6.484 6.68 6.68 1.279.058 1.687.072 4.947.072s3.668-.014 4.947-.072c4.305-.196 6.484-2.374 6.68-6.68.058-1.279.072-1.687.072 4.947s-.014-3.668-.072-4.947c-.196-4.305-2.374-6.484-6.68-6.68-1.279-.058-1.687-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"></path>
+                    </svg>
+                </a>
+                <!-- YouTube -->
+                <a href="#" class="text-gray-400 hover:text-white transition-transform transform hover:scale-110" aria-label="YouTube">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136C4.495 20.455 12 20.455 12 20.455s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+                    </svg>
+                </a>
+                <!-- Spotify -->
+                <a href="#" class="text-gray-400 hover:text-white transition-transform transform hover:scale-110" aria-label="Spotify">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6.25 17.61c-.3.36-1.02.48-1.38.18-2.58-1.56-5.82-1.92-9.66-.96-.42.12-.9-.18-.96-.6-.06-.42.18-.9.6-.96 4.2-1.08 7.8-0.66 10.74 1.14.36.24.42.78.18 1.14zm1.02-2.7c-.36.42-1.14.54-1.56.18-2.94-1.8-7.32-2.34-10.62-1.26-.48.12-1.02-.18-1.14-.66-.12-.48.18-1.02.66-1.14 3.72-1.2 8.52-.6 11.82 1.44.42.3.54.96.18 1.44zm.12-2.82c-3.54-2.16-9.36-2.34-12.42-1.26-.54.18-1.14-.18-1.32-.72-.18-.54.18-1.14.72-1.32 3.6-.9 10.02-.72 14.16 1.62.6.36.84 1.14.48 1.68-.36.6-.96.84-1.68.48z"></path>
+                    </svg>
+                </a>
+                <!-- Twitch -->
+                <a href="#" class="text-gray-400 hover:text-white transition-transform transform hover:scale-110" aria-label="Twitch">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M11.571 4.714h1.714v5.143H11.57zm5.143 0H18.43v5.143h-1.714zM12 0L2.143 3.429v13.714h5.143V24l3.428-3.429h3.429l6.857-6.857V0zm9.429 13.714l-3.429 3.429h-3.428l-2.571 2.571v-2.571H6.857V3.429h14.57z"></path>
+                    </svg>
+                </a>
+            </div>
+            <p>&copy; 2025 Kye Beezy. All Rights Reserved. </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Area -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- 1. Scroll Reveal (Intersection Observer) ---
+            // ---------------------------------------------
+            // This detects when elements scroll into view
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    // When the element is intersecting
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        // Unobserve after firing once
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1 // Fire when 10% of the element is visible
+            });
+
+            // Select all elements to animate
+            const targets = document.querySelectorAll('.scroll-reveal');
+            // Observe each target
+            targets.forEach(target => {
+                observer.observe(target);
+            });
+
+
+            // --- 2. Hero Section Parallax Scroll ---
+            // ---------------------------------
+            // This makes the hero title move slower than the scroll and fade out
+            
+            const heroContent = document.getElementById('hero-content');
+            window.addEventListener('scroll', () => {
+                const scrollY = window.pageYOffset;
+                if (scrollY < window.innerHeight) {
+                    // Move up (at 0.4x scroll speed)
+                    heroContent.style.transform = `translateY(${scrollY * 0.4}px)`;
+                    // Fade out (fully transparent after 700px scroll)
+                    heroContent.style.opacity = 1 - (scrollY / 700);
+                }
+            });
+
+            // --- 3. Navbar Background Change on Scroll ---
+            // -----------------------------
+            // Makes the navbar background more opaque on scroll
+            
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    // More opaque background after 50px scroll
+                    navbar.style.backgroundColor = 'rgba(10, 10, 10, 0.8)';
+                } else {
+                    // Lighter background at the top
+                    navbar.style.backgroundColor = 'rgba(10, 10, 10, 0.5)';
+                }
+            });
+
+        });
+    </script>
+
+</body>
+</html>
